@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.face_image{
+    display: flex;
+    justify-content: center;
+}
+
+.face {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.eye {
+    width: 20px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+}
+.eye.left {
+    left: 50px;
+}
+.eye.right {
+    right: 50px;
+}
+.mouth {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: 40px;
+    border-radius: 0 0 50px 50px;
+    overflow: hidden;
+}
+
+.first_message > h1 {
+    color: #FF4500;
+}
+
+.first_message, .second_message, .third_message, .fourth_message{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 3s ease;
+} 
+    
+/* .second_message, #second_message__{
+    opacity: 1 !important
+} */
+
+#second_message_, #second_message__, #second_message___{
+    opacity: 0;
+    margin: 0;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media screen and (max-width: 768px) {
+    .first_message, .second_message, .third_message {
+        position: absolute;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .face {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .eye {
+        width: 12px;
+        height: 6px;
+        top: 30px;
+    }
+    
+    .eye.left {
+        left: 30px;
+    }
+    
+    .eye.right {
+        right: 30px;
+    }
+    
+    .mouth {
+        width: 70px;
+        height: 35px;
+        bottom: 25px;
+    }
+    
+    .mouth::before {
+        width: 70px;
+        height: 35px;
+    }
+}
+
+/* Responsive cho điện thoại nhỏ hơn */
+@media screen and (max-width: 480px) {
+    .first_message, .second_message, .third_message {
+        font-size: 20px;
+    }
+
+    .face {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .eye {
+        width: 10px;
+        height: 5px;
+        top: 25px;
+    }
+    
+    .eye.left {
+        left: 25px;
+    }
+    
+    .eye.right {
+        right: 25px;
+    }
+    
+    .mouth {
+        width: 60px;
+        height: 30px;
+        bottom: 20px;
+    }
+    
+    .mouth::before {
+        width: 60px;
+        height: 30px;
+    }
+}
+
